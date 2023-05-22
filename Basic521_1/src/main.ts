@@ -60,6 +60,25 @@ let everd: Guitarist = {
 };
 // everd.year = "sdas" not allowed
 
+//type aliases 类型别名
+type stringOrNumber = string | number;
+
+type stringOrNumberArray = (string | number)[];
+
+type UserId = stringOrNumber;
+
+// interface PostId = stringOrNumber; it doesn't work
+
+let myName = 'Julian';
+myName = 'fiona';
+
+let myName_limited: 'Julian';
+// myName_limited = 'ok'; not allowed
+myName_limited = 'Julian';
+
+let userName: 'One' | 'two' | 'three';
+userName = 'One'; //only can be equal to one two three
+
 type FlexClass = {
   name?: string;
   active?: boolean;
