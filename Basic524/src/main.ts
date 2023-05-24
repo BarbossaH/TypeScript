@@ -36,3 +36,14 @@ let myVal1: number = addOrConcat(2, 2, 'concat') as number;
 // 10 as string; not allowed
 
 10 as unknown as string; //类型转换
+
+//with DOM
+//typescript doesn't know what exactly type it is
+const img = document.getElementById('#imgId') as HTMLImageElement;
+img.src; //if using assertion, it will work
+const img3 = document.getElementById('#ko')!;
+// img3.src; it is illegal because ts doesn't know img3 has src property or not
+const img1 = document.querySelector('img') as HTMLImageElement;
+img1.src;
+const img2 = document.querySelector('img');
+img2?.src;
