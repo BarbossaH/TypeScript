@@ -10,6 +10,7 @@ type Guitarist = {
 };
 
 type UserId = stringOrNumber;
+const test: UserId = 1;
 
 //Literal types
 let myName: 'Julian';
